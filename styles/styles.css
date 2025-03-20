@@ -19,7 +19,7 @@ html, body {
 
 h1, h2, h3, h4, summary {
     text-wrap: balance;
-    font-family: 'Source Code Pro';
+    font-family: 'Nunito';
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 
 h2, summary {
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 h3 {
@@ -59,7 +59,7 @@ p {
     "aside main"
     "aside footer";
 
-    background-color: #eefeff;
+    background-color: #f6fcfca5;
 
 }
 
@@ -72,9 +72,9 @@ p {
 
 .ep-logo {
     background-image: url('../assets/img/logo2.png');
-    margin: 20px auto 10px auto;
-    width: 120px;
-    height: 120px;
+    margin: 10px auto 10px auto;
+    width: 80px;
+    height: 80px;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -84,13 +84,15 @@ p {
     text-align: center;
     h1 {
         line-height: 1;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
     h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
         line-height: 1;
-        margin-bottom: 20px;
+        margin-bottom: 4rem;
+        font-family: 'Nunito';
+        font-weight: 300;
     }
     
 }
@@ -102,9 +104,15 @@ aside {
     background-color: #7ac698;
 }
 
-summary:hover, li:hover, a:hover {
+summary:hover, li:hover {
     transition-duration: 200ms;
-    background-color: #a1d3b7;
+    background-color: #449d6c;
+    text-shadow: 1px 0px 2px #2c2c2c71;
+}
+
+.introduccion-sum:hover {
+    transition-duration: 200ms;
+    background-color: #449d6c;
     text-shadow: 1px 0px 2px #2c2c2c71;
 }
 
@@ -112,27 +120,32 @@ details > summary, li {
     display: block;
     text-align: center;
     padding: 20px;
-    color: #e0ebe5;
+    color: #fff;
 
     font-size: 1.3rem;
     font-family: 'Nunito';
     list-style-type: none;
     cursor: pointer;
     user-select: none;
-
-    a {
-        text-decoration: none;
-        color: #e0ebe5;
-    }
 }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 details[open] > summary{
     background-color: #3dae70b0;
 }
 details[open] {
-    background-color: #76e0a652;
+    background-color: #43ba7952;
+
+    li {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
 }
-
-
 
 /* Contenido principal */
 
@@ -140,14 +153,18 @@ details[open] {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin: 50px auto;
     gap: 20px;
     grid-area: main;
-    
+    max-width: 800px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Nunito';
+        color: #2c2c2c;
+    }
+
 }
-
-
-
 
 iframe {
     display: inline-block;
@@ -189,7 +206,7 @@ footer > h2 {
 .card-cod {
     display: flex;
     flex-direction: column;
-    min-width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -225,7 +242,7 @@ footer > h2 {
     background-color: #fff;
     box-shadow: 1px 1px 10px #2c2c2c71;
     border-radius: 0 0 10px 10px;
-    max-width: 800px;
+    
     p {
         padding: 0 15px;
         text-align: justify;
@@ -238,6 +255,35 @@ footer > h2 {
     width: 80%;
     margin: 0 auto;
     font-family: 'Cascadia Code PL';
+}
+
+@media(max-width:1400px) {
+
+    .card-cod {
+        width: 80%;
+    }
+    
+    aside {
+    display: none;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows:  150px repeat(2, 1fr) auto;
+        min-height: 100dvh;
+        grid-template-areas: 
+        "main"
+        "main"
+        "main";
+    
+        background-color: #f6fcfca5;
+    
+    }
+
+    footer {
+        display: none;
+    }
+
 }
 
 
