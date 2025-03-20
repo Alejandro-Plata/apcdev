@@ -60,7 +60,40 @@
         <main class="contenido-principal">
           <h1>⚠️ Excepciones ⚠️</h1>
         
-          <p>Cuando un programa termina con un error, se lanza una excepción. Por ejemplo, un programa podría llamar a un método con una referencia a un valor nulo y lanzar un tipo de excepción denominada <span class="negrita">Null Pointer Exception</span>. Otro ejemplo conocido (y tedioso) es cuando intentamos acceder a un índice de un array que no existe. Esto lanza una excepción del tipo <span class="negrita">Arrays Out Of Bounds</span> (un error por desbordamiento).</p>
+          <p>Si te has dado cuenta, a pesar de que tu código funciona perfectamente, habrá situaciones en las que se produzcan errores. Por ejemplo, si asignamos null a una variable y luego tratamos de acceder a alguno de los atributos o métodos que tiene esa variable, nos encontraremos que en vez de ejecutarse código se produce un error bastante temerario que muestra bastantes líneas de código y que interrumpe la ejecución del programa. Esta interrupción de la ejecución del programa se conoce como <span class="negrita">excepción</span>.
+
+            <section class="card-cod">
+
+              <header class="card-cod-header">
+                  <div class="card-titulo">
+                  <h2>NullPointer Exception</h2>
+                  <h3>Ejemplo de excepción en Java</h3>
+                  </div>
+                  <div>
+                      <img class="card-icon" src="../assets/img/logo.png" alt="Imagen card">
+                  </div>
+              </header>
+              <footer class="card-cod-footer">
+                  
+                  <div class="card-cod-codigo">
+                      <pre>
+    
+    public class <span class="reservada">Main</span> {
+
+      public static void <span class="reservada">main</span> (String[] args) {
+
+        <span class="reservada">String</span> persona = <span class="var">null</span>;
+        <span class="reservada">String</span> mayus = persona.<span class="var">toUpperCase()</span>;
+        <span class="reservada">System.out.println</span>(<span class="var">mayus</span>);
+
+      }
+
+    }
+                      </pre>
+                  </div>
+              </footer>
+            </section>  
+            
           
 
           <h2>Cómo manejar excepciones</h2>
@@ -77,7 +110,7 @@
 
         </main>
   
-        <footer>
+        <footer class="pie-pag">
           <nav>
               <ul>
                   <a href="">

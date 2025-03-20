@@ -50,7 +50,7 @@ p {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 250px auto;
     grid-template-rows:  150px repeat(2, 1fr) auto;
     min-height: 100dvh;
     grid-template-areas: 
@@ -177,14 +177,14 @@ iframe {
     text-align: center;
 }
 
-footer {
+.pie-pag {
     text-align: center;
     grid-area: footer;
     background-color: #7ac698;
     color: #e0ebe5;
 }
 
-footer > nav {
+.pie-pag > nav {
     padding: 0;
     margin: 0;
     background-color: #d8fde8;
@@ -196,7 +196,7 @@ nav > ul{
     padding: 20px 0 20px 20px; 
 }
 
-footer > h2 {
+.pie-pag > h2 {
     font-family: 'Nunito';
     font-size: 1.5rem;
 }
@@ -206,7 +206,7 @@ footer > h2 {
 .card-cod {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    min-width: 800px;
     margin: 0 auto;
 }
 
@@ -215,7 +215,8 @@ footer > h2 {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: #3dae70;
+    background-color: #e79658;
+    
     border-radius: 10px 10px 0 0;
     color: white;
 }
@@ -231,14 +232,16 @@ footer > h2 {
     font-weight: 400;
 }
 .card-icon {
-    width: 60px;
+    width: 70px;
     height: 70px;
     padding: 10px;
     margin-right: 20px;
+    background-color: #faa564;
+    border-radius: 50%;
 }
 
 .card-cod-footer {
-    padding: 10px;
+    padding: 40px 10px;
     background-color: #fff;
     box-shadow: 1px 1px 10px #2c2c2c71;
     border-radius: 0 0 10px 10px;
@@ -255,6 +258,19 @@ footer > h2 {
     width: 80%;
     margin: 0 auto;
     font-family: 'Cascadia Code PL';
+}
+
+pre {
+    font-family: 'Cascadia Code PL';
+    color: #2c2c2c;
+}
+
+.var {
+    color: #34e;
+}
+
+.reservada {
+    color: palevioletred;
 }
 
 @media(max-width:1400px) {
@@ -280,7 +296,7 @@ footer > h2 {
     
     }
 
-    footer {
+    .pie-pag {
         display: none;
     }
 
