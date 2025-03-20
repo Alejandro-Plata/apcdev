@@ -50,11 +50,11 @@ p {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 255px auto;
+    grid-template-columns: 300px auto;
     grid-template-rows:  150px repeat(2, 1fr) auto;
     min-height: 100dvh;
     grid-template-areas: 
-    "header header"
+    "aside main"
     "aside main"
     "aside main"
     "aside footer";
@@ -67,36 +67,72 @@ p {
 
 .encabezado-principal { 
     position: relative;
-    background-color: #3dae70;
     grid-area: header;
 }
 
 .ep-logo {
-    background-image: url('../assets/img/logo.png');
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 150px;
-    height: 150px;
+    background-image: url('../assets/img/logo2.png');
+    margin: 20px auto 10px auto;
+    width: 120px;
+    height: 120px;
     background-size:contain;
     background-repeat: no-repeat;
 }
 
 .ep-titulo {
-    padding-top: 15px;
     color: #fff;
     text-align: center;
-    &h2 {
-        margin-top: 10px;
+    h1 {
+        line-height: 1;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
+    h2 {
+        font-size: 1.3rem;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    
 }
 
 /* Aside bar */
 
 aside {
     grid-area: aside;
-    background-color: #7ed7a6;
+    background-color: #7ac698;
 }
+
+summary:hover, li:hover, a:hover {
+    transition-duration: 200ms;
+    background-color: #a1d3b7;
+    text-shadow: 1px 0px 2px #2c2c2c71;
+}
+
+details > summary, li {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    color: #e0ebe5;
+
+    font-size: 1.3rem;
+    font-family: 'Nunito';
+    list-style-type: none;
+    cursor: pointer;
+    user-select: none;
+
+    a {
+        text-decoration: none;
+        color: #e0ebe5;
+    }
+}
+details[open] > summary{
+    background-color: #3dae70b0;
+}
+details[open] {
+    background-color: #76e0a652;
+}
+
+
 
 /* Contenido principal */
 
@@ -111,42 +147,7 @@ aside {
 }
 
 
-details {
-    margin: 0 auto;
-    max-width: 800px;
-}
 
-details > h3, h4 {
-    margin: 30px 0 0 0;
-    font-family: 'Cascadia Code PL';
-    font-weight: 500;
-    text-align: center;
-}
-
-h4 {
-    margin: 8px 0 30px 0;
-    opacity: 0.5;
-}
-
-p {
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-details > summary {
-    text-align: center;
-    background-color: #7ed7a6;
-    height: 100px;
-    color: #2C2C2C;
-    font-weight: 400;
-    padding-top: 30px;
-    list-style-type: "☕ ";
-    border-radius: 5px;
-}
-
-details[open] > summary {
-    list-style-type: "🏮 ";
-}
 
 iframe {
     display: inline-block;
@@ -160,9 +161,27 @@ iframe {
 }
 
 footer {
-    background-color: #3dae70;
-
+    text-align: center;
     grid-area: footer;
+    background-color: #7ac698;
+    color: #e0ebe5;
+}
+
+footer > nav {
+    padding: 0;
+    margin: 0;
+    background-color: #d8fde8;
+}
+
+nav > ul{
+    display: flex;
+    gap: 30px;
+    padding: 20px 0 20px 20px; 
+}
+
+footer > h2 {
+    font-family: 'Nunito';
+    font-size: 1.5rem;
 }
 
 /* Cards */
@@ -196,7 +215,7 @@ footer {
 }
 .card-icon {
     width: 60px;
-    height: 60px;
+    height: 70px;
     padding: 10px;
     margin-right: 20px;
 }
