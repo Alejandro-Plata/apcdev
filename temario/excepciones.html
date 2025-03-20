@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logoExc.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Excepciones</title>
+</head>
+<body>
+    <div class="wrapper">
+  
+        <aside>
+          <header class="encabezado-principal">
+            <div class="ep-logo"></div>
+            <div class="ep-titulo">
+              <h1>Recursos para aprender Java</h1>
+              <h2>Excluídos caprinos y gorrinos</h2>
+            </div>
+          </header>
+          <details open name="temario" >
+            <summary class="introduccion-sum"><a href="../index.html">Introducción</a></summary>
+          </details>
+  
+          <details name="temario">
+            <summary>Temario escrito</summary>
+            <ul>
+              <a href="">
+                <li>Excepciones</li> 
+                </a>
+              <a href="">
+                <li>Interfaces</li> 
+              </a>
+              <a href="">
+               
+              <a href="">
+                <li>Colecciones</li>
+              </a>
+            </ul>
+          </details>
+          <details name="temario">
+            <summary>Temario en vídeos</summary>
+  
+            <ul>
+              <a href="">
+                <li>Excepciones</li> 
+                </a>
+              <a href="">
+                <li>Interfaces</li> 
+              </a>
+              <a href="">
+               
+              <a href="">
+                <li>Colecciones</li>
+              </a>
+            </ul>
+          </details>
+        </aside>
+  
+        <main class="contenido-principal">
+          <h1>⚠️ Excepciones ⚠️</h1>
+        
+          <p>Si te has dado cuenta, a pesar de que tu código funciona perfectamente, habrá situaciones en las que se produzcan errores. Por ejemplo, si asignamos <span class="negrita">null</span> a una variable y luego tratamos de acceder a alguno de los atributos o métodos que tiene esa variable, nos encontraremos que en vez de ejecutarse código se produce un error bastante temerario que muestra bastantes líneas de código y que interrumpe la ejecución del programa. Esta interrupción de la ejecución del programa se conoce como <span class="negrita">excepción</span>.
+
+            <section class="card-cod">
+
+              <header class="card-cod-header">
+                  <div class="card-titulo">
+                  <h2>NullPointer Exception</h2>
+                  <h3>Ejemplo de excepción en Java</h3>
+                  </div>
+                  <div>
+                      <img class="card-icon" src="../assets/img/logo.png" alt="Imagen card">
+                  </div>
+              </header>
+              <footer class="card-cod-footer">
+                  
+                  <div class="card-cod-codigo">
+                      <pre>
+    
+    public class <span class="reservada">Main</span> {
+
+      public static void <span class="reservada">main</span> (String[] args) {
+
+        <span class="reservada">String</span> persona = <span class="var">null</span>;
+        <span class="reservada">String</span> mayus = persona.<span class="var">toUpperCase()</span>;
+        <span class="reservada">System.out.println</span>(<span class="var">mayus</span>);
+
+      }
+
+    }
+                      </pre>
+                  </div>
+              </footer>
+            </section>  
+
+          <h2>Cómo manejar excepciones</h2>
+          <p>Para manejar excepciones, es decir, evitar que nuestro programa se comporte de forma rara y pueda causar daños mayores, generalmente es buena idea hacer que este pete (en términos más apropiados, manejar la excepción suele conllevar detener abruptamente la ejecución de nuestro programa). Para ello, utilizamos una estructura en apariencia similar a un if-else pero que tiene bastantes particularidades que la hacen extremadamente útil.</p>
+          <p>Esta es la estructura <span class="negrita">try {} catch (Exception e) {}</span> que utilizamos para manejar las excepciones.</p>
+
+          <section class="card-cod">
+
+            <header class="card-def-header">
+                <div class="card-titulo">
+                <h2>Bloque try - catch</h2>
+                </div>
+                <div>
+                    <img class="card-def-icon" src="../assets/img/logo.png" alt="Imagen card">
+                </div>
+            </header>
+            <footer class="card-cod-footer">
+                
+             <p>La palabra reservada <span class="reservada">try</span> inicia un bloque que contiene código que <span class="negrita">podría lanzar una excepción</span>. Es decir, el código potencialmente problemático se contiene dentro del bloque try.</p> 
+             <p>Por otra parte, el bloque <span class="reservada">catch</span> define <span class="negrita">qué ocurre si el bloque try lanza una excepción</span>. <span class="reservada">Catch</span> va de la mano del <span class="negrita">tipo de excepción</span> que maneja el bloque try - catch, por ejemplo "todas las excepciones que existen en el lenguaje de programación Java": <span class="negrita">catch (<span class="var">Exception</span> e)</span>.</p>  
+
+            </footer>
+          </section> 
+
+        </main>
+  
+        <footer class="pie-pag">
+          <nav>
+              <ul>
+                  <a href="">
+                      <li>Introducción</li>
+                  </a>
+                  <a href="">
+                      <li>Ejercicios</li>
+                  </a>
+                  <a href="">
+                      <li>Git</li>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=qxXcI56NfnE&t=8384s">
+                      <li>Java desde cero</li>
+                  </a>
+              </ul>
+          </nav>
+          <h2>
+            &copy; Me reservo el derecho a insultarte por no saber programar
+          </h2>
+        </footer>
+      </div> 
+</body>
+</html>
