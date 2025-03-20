@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logoExc.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/logoExc.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
     <title>Excepciones</title>
 </head>
@@ -112,9 +112,78 @@
                 
              <p>La palabra reservada <span class="reservada">try</span> inicia un bloque que contiene código que <span class="negrita">podría lanzar una excepción</span>. Es decir, el código potencialmente problemático se contiene dentro del bloque try.</p> 
              <p>Por otra parte, el bloque <span class="reservada">catch</span> define <span class="negrita">qué ocurre si el bloque try lanza una excepción</span>. <span class="reservada">Catch</span> va de la mano del <span class="negrita">tipo de excepción</span> que maneja el bloque try - catch, por ejemplo "todas las excepciones que existen en el lenguaje de programación Java": <span class="negrita">catch (<span class="var">Exception</span> e)</span>.</p>  
+          
+             <div class="card-cod-codigo">
+              <pre>
+
+  <span class="reservada">try</span> {
+    <span class="comentario">//Código que podría lanzar una excepción</span>
+  }
+  <span class="reservada">catch</span> (<span class="var">Exception e</span>) {
+    <span class="comentario">//Bloque de código que se ejecuta si se lanza una excepción</span>
+  }  
+              </pre>
+          </div>
 
             </footer>
           </section> 
+
+      <h2>Tipos de excepciones</h2>
+        <p>Algo que puede resultarnos contraintuitivo al principio que todas las excepciones que han sucedido en nuestro programa durante el tiempo que llevamos programando <span class="negrita">no han necesitado ser tratadas.</span> Esto es debido a que no todas las excepciones son iguales y su variedad nos permite acotar cuál es el problema que tiene nuestro código, facilitando su solución. Justo lo contrario a lo que hace MariaDB :).</p>
+        <p>El tipo de excepciones al que estamos más acostumbrados son las <span class="var">excepciones en tiempo de ejecución</span> mejor conocidas como <span class="negrita">RunTimeExceptions.</span> Este tipo de excepciones se <span class="reservada">lanzan</span> sin que nosotros tengamos que hacer nada, ya que se deben a <span class="negrita">errores de programación</span> que pueden ser evitados simplemente programando correctamente.</p>
+        <p>Veamos un ejemplo: </p>
+
+        <section class="card-cod">
+
+          <header class="card-cod-header">
+              <div class="card-titulo">
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Try - catch</h2>
+              <h3>Cuando es necesario utilizarlo</h3>
+              </div>
+              <div>
+                  <img class="card-icon" src="../assets/img/logo.png" alt="Imagen card">
+              </div>
+          </header>
+          <footer class="card-cod-footer">
+              <h3 class="error">Mal 🔥</h3>
+              <div class="card-cod-codigo">
+                  <pre>
+
+public class <span class="reservada">Main</span> {
+
+  public static void <span class="reservada">main</span> (String[] args) {
+
+    <span class="reservada">String</span> persona = <span class="var">null</span>;
+    <span class="reservada">String</span> mayus = persona.<span class="var">toUpperCase()</span>;
+    <span class="reservada">System.out.println</span>(<span class="var">mayus</span>);
+
+  }
+
+}
+                  </pre>
+              </div>
+
+              <h3 class="acierto">Bien ✔️</h3>
+              <div class="card-cod-codigo">
+                  <pre>
+
+public class <span class="reservada">Main</span> {
+
+  public static void <span class="reservada">main</span> (String[] args) {
+
+    <span class="reservada">String</span> persona = <span class="var">null</span>;
+    <span class="reservada">String</span> mayus = persona.<span class="var">toUpperCase()</span>;
+    <span class="reservada">System.out.println</span>(<span class="var">mayus</span>);
+
+  }
+
+}
+                  </pre>
+              </div>
+
+          </footer>
+        </section>  
+
 
         </main>
   

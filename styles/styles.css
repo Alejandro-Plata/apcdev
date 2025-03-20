@@ -308,18 +308,48 @@ nav > ul{
     box-shadow: 1px 1px 10px #2c2c2c71;
     border-radius: 0 0 10px 10px;
     
+    .error {
+        display: inline-flex;
+        padding: 8px 30px;
+        margin-left: 80px;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px inset #4b1113;
+
+        color: #4b1113;
+        background-color: #FFEBEC;
+    }
+
+    .acierto {
+        display: inline-flex;
+        padding: 8px 30px;
+        margin-left: 80px;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px inset #1D4A1D;
+
+        color: #1D4A1D;
+        background-color: #E6F6E6;
+    }
+
     p {
         padding: 0 15px;
         text-align: justify;
+        margin-bottom: 10px;
     }
+
+    
 }
 
 .card-cod-codigo {
     box-shadow: 1px 2px 3px #2c2c2c71;
-    border-radius:5px;
+    border-radius:10px;
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto 40px auto;
     font-family: 'Cascadia Code PL';
+
 }
 
 pre {
@@ -335,6 +365,10 @@ pre {
 .reservada {
     color: palevioletred;
     font-weight: bold;
+}
+
+.comentario {
+    color: silver;
 }
 
 @media(max-width:1400px) {
