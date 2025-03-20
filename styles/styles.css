@@ -145,7 +145,7 @@ details[open] {
 
 }
 
-summary:hover, a:hover {
+summary:hover{
     transition-duration: 200ms;
     background-color: #a1d3b7;
     text-shadow: 1px 0px 2px #2c2c2c71;
