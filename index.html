@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/png" />
     <title>Recursos Java</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <header class="encabezado-principal">
+      <!-- <header class="encabezado-principal">
 
             <div class="ep-logo"></div>
             <div class="ep-titulo">
@@ -20,175 +19,246 @@
                 <h2>Excluídos caprinos y gorrinos</h2>
             </div>
 
+        </header> -->
+
+      <aside>
+        <header class="encabezado-principal">
+          <div class="ep-logo"></div>
+          <div class="ep-titulo">
+            <h1>Recursos para aprender Java</h1>
+            <h2>Excluídos caprinos y gorrinos</h2>
+          </div>
         </header>
+        <details open name="temario">
+          <summary><a href="">Hola</a></summary>
+        </details>
 
-        <aside>Hola</aside>
+        <details name="temario">
+          <summary>Temario escrito</summary>
+          <ul>
+            <a href="">
+              <li></li> 
+              </a>
+            <a href="">
+              <li></li> 
+            </a>
+            <a href="">
+              <li></li> 
+              </a>
+            <a href="">
+              <li></li>
+            </a>
+          </ul>
+        </details>
+        <details name="temario">
+          <summary>Temario en vídeos</summary>
 
-        <main class="contenido-principal">
+          <ul>
+            <a href="">
+              <li></li> 
+              </a>
+            <a href="">
+              <li></li> 
+            </a>
+            <a href="">
+              <li></li> 
+              </a>
+            <a href="">
+              <li></li>
+            </a>
+          </ul>
+        </details>
+      </aside>
 
-            <section class="card-cod">
+      <main class="contenido-principal">
+        <section class="card-cod">
+          <header class="card-cod-header">
+            <div class="card-titulo">
+              <h2>Titulo Card</h2>
+              <h3>Subtitulo Card</h3>
+            </div>
+            <div>
+              <img
+                class="card-icon"
+                src="assets/img/logo.png"
+                alt="Imagen card"
+              />
+            </div>
+          </header>
+          <footer class="card-cod-footer">
+            <p>
+              Hola mi nombre es Alejandro Plata Cortés. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Reiciendis animi accusantium
+              est maxime iure, qui, tempore aperiam tenetur quo consectetur
+              veniam esse. Delectus saepe velit dolorem facere quas debitis
+              corporis!
+            </p>
+            <div class="card-cod-codigo">
+              <pre></pre>
+            </div>
+          </footer>
+        </section>
 
-                <header class="card-cod-header">
-                    <div class="card-titulo">
-                    <h2>Titulo Card</h2>
-                    <h3>Subtitulo Card</h3>
-                    </div>
-                    <div>
-                        <img class="card-icon" src="assets/img/logo.png" alt="Imagen card">
-                    </div>
-                </header>
-                <footer class="card-cod-footer">
-                    <p>Hola mi nombre es Alejandro Plata Cortés. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi accusantium est maxime iure, qui, tempore aperiam tenetur quo consectetur veniam esse. Delectus saepe velit dolorem facere quas debitis corporis!</p>
-                    <div class="card-cod-codigo">
-                        <pre>
-                            
-                        </pre>
-                    </div>
-                </footer>
+        <section class="tema">
+          <details name="tema">
+            <summary>Tema 1</summary>
 
-            </section>
+            <h3>Introducción teórica</h3>
+            <h4>(Hasta el minuto 11:30)</h4>
+            <div class="iframe-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/qxXcI56NfnE?si=ncBxH4SDQotxkMR4&amp;start=140"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-            <section class="tema">
+            <h3>Variables y operadores</h3>
+            <h4>(Hasta 1:23:31 -> 50 minutos)</h4>
 
-                <details name="tema">
+            <div class="iframe-container" style="margin: 20px 0 10px 0">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/qxXcI56NfnE?si=fZVmzj5c-caXCynB&amp;start=2127"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
 
-                    <summary>Tema 1</summary>
+            <h3>Condicionales</h3>
+            <p>
+              Este vídeo en inglés hace una introducción muy buena a los
+              condicionales, su estructura y uso. El único problema es, bueno,
+              que está en inglés, pero los subtítulos tienen la opción de
+              traducción automática al español.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/HQ3dCWjfRZ4?si=4kwVLhC_Lg7Fz21u"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>If-else y Switch</h3>
+            <div class="iframe-container" style="margin: 20px 0 10px 0">
+              <div class="iframe-container" style="margin: 20px 0 10px 0">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/qxXcI56NfnE?si=DuxY4UA7U6cthOuM&amp;start=5011"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <h4>(Hasta el 2:02:08 -> 40 minutos)</h4>
 
-                    <h3>Introducción teórica</h3>
-                    <h4>(Hasta el minuto 11:30)</h4>
-                    <div class="iframe-container">
+            <h3>Operador ternario</h3>
+            <div class="iframe-container" style="margin: 20px 0 10px 0">
+              <div class="iframe-container" style="margin: 20px 0 10px 0">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/qxXcI56NfnE?si=FDlXu1Iifs82cUx6&amp;start=8384"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <h4>(Hasta el 2:35:43 -> 20 minutos)</h4>
+            <p>
+              Es momento de hacer ejercicios (muchos ejercicios). Aquí van unos
+              cuantos, es normal tener que romperse la cabeza y tardar en
+              hacerlos, es necesario tener un mínimo de tolerancia a la
+              frustración.
+            </p>
+            <p>
+              <a
+                href="https://www.exercisesjava.com/es/estructuras-de-control-condiciones/"
+                target="_blank"
+                >Ejercicios Java</a
+              >
+            </p>
 
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/qxXcI56NfnE?si=ncBxH4SDQotxkMR4&amp;start=140"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Variables y operadores</h3>
+            <h4>(Hasta el minuto 11:30)</h4>
 
-                    </div>
+            <h3>Variables y operadores</h3>
+            <h4>(Hasta el minuto 11:30)</h4>
+          </details>
+        </section>
 
-                    <h3>Variables y operadores</h3>
-                    <h4>(Hasta 1:23:31 -> 50 minutos)</h4>
+        <section class="tema">
+          <details name="tema">
+            <summary>Tema 2</summary>
+          </details>
+        </section>
 
-                    <div class="iframe-container" style="margin:20px 0 10px 0">
+        <section class="tema">
+          <details name="tema">
+            <summary>Tema 3</summary>
+          </details>
+        </section>
 
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/qxXcI56NfnE?si=fZVmzj5c-caXCynB&amp;start=2127"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="tema">
+          <details name="tema">
+            <summary>Tema 4</summary>
+          </details>
+        </section>
 
-                    </div>
+        <section class="tema" name="tema">
+          <details name="tema">
+            <summary>Tema 5</summary>
+          </details>
+        </section>
+      </main>
 
-                    <h3>Condicionales</h3>
-                    <p>Este vídeo en inglés hace una introducción muy buena a los condicionales, su estructura y uso. El
-                        único problema es, bueno, que está en inglés, pero los subtítulos tienen la opción de traducción
-                        automática al español.</p>
-                    <div class="iframe-container">
-
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/HQ3dCWjfRZ4?si=4kwVLhC_Lg7Fz21u"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    </div>
-                    <h3>If-else y Switch</h3>
-                    <div class="iframe-container" style="margin:20px 0 10px 0">
-
-                        <div class="iframe-container" style="margin:20px 0 10px 0">
-
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/qxXcI56NfnE?si=DuxY4UA7U6cthOuM&amp;start=5011"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                        </div>
-
-                    </div>
-                    <h4>(Hasta el 2:02:08 -> 40 minutos)</h4>
-
-                    <h3>Operador ternario</h3>
-                    <div class="iframe-container" style="margin:20px 0 10px 0">
-
-                        <div class="iframe-container" style="margin:20px 0 10px 0">
-
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/qxXcI56NfnE?si=FDlXu1Iifs82cUx6&amp;start=8384"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                        </div>
-
-                    </div>
-                    <h4>(Hasta el 2:35:43 -> 20 minutos)</h4>
-                    <p> Es momento de hacer ejercicios (muchos ejercicios). Aquí van unos cuantos, es normal tener que
-                        romperse la cabeza y tardar en hacerlos, es necesario tener un mínimo de tolerancia a la
-                        frustración. </p>
-                    <p><a href="https://www.exercisesjava.com/es/estructuras-de-control-condiciones/"
-                            target="_blank">Ejercicios Java</a></p>
-
-                    <h3>Variables y operadores</h3>
-                    <h4>(Hasta el minuto 11:30)</h4>
-
-                    <h3>Variables y operadores</h3>
-                    <h4>(Hasta el minuto 11:30)</h4>
-
-                </details>
-
-            </section>
-
-            <section class="tema">
-
-                <details name="tema">
-
-                    <summary>Tema 2</summary>
-
-                </details>
-
-            </section>
-
-            <section class="tema">
-
-                <details name="tema">
-
-                    <summary>Tema 3</summary>
-
-                </details>
-
-            </section>
-
-            <section class="tema">
-
-                <details name="tema">
-
-                    <summary>Tema 4</summary>
-
-                </details>
-
-            </section>
-
-            <section class="tema" name="tema">
-
-                <details name="tema">
-
-                    <summary>Tema 5</summary>
-
-                </details>
-
-            </section>
-
-
-        </main>
-
-        <footer>
-
-            <h2 style="color:white; text-align: center">&copy; Todos los derechos a insultarte por no saber programar
-                están reservados</h2>
-
-        </footer>
+      <footer>
+        <nav>
+            <ul>
+                <a href="">
+                    <li></li>
+                </a>
+                <a href="">
+                    <li></li>
+                </a>
+                <a href="">
+                    <li></li>
+                </a>
+                <a href="">
+                    <li></li>
+                </a>
+            </ul>
+        </nav>
+        <h2>
+          &copy; Me reservo el derecho a insultarte por no saber programar
+        </h2>
+      </footer>
     </div>
+<<<<<<< HEAD
+  </body>
+=======
 </body>
 
+>>>>>>> 2ee764467d1875913d1d8be5edfda49c1285a369
 </html>
