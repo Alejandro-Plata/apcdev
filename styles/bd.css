@@ -1,0 +1,58 @@
+.ep-logo {
+    background-image: url('../assets/img/bd_logo.png');
+}
+
+/* Colores */
+
+summary:hover, li:hover {
+    transition-duration: 200ms;
+    background-color: #5673c8;
+    text-shadow: 1px 0px 2px #2c2c2c71;
+}
+.introduccion-sum:hover {
+    transition-duration: 200ms;
+    background-color: #5673c8;
+    text-shadow: 1px 0px 2px #2c2c2c71;
+}
+details[open] > summary{
+    background-color: rgba(51, 66, 238, 0.87);
+}
+details[open] {
+    background-color: rgba(51, 66, 238, 0.62);
+
+    li {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+}
+aside {
+    background-color: rgba(66, 79, 228, 0.669);
+}
+.barra-nav {
+    background-color: rgba(66, 79, 228, 0.669);
+
+    li:hover {
+        background-color: rgba(66, 79, 228, 0.669);
+       opacity: 1;
+    }
+
+}
+.pie-pag {
+    background-color:rgba(66, 79, 228, 0.669);
+}
+
+/* Modificaciones */
+
+.negrita {
+    box-shadow: 1px 1px 5px #2c2c2c71;
+    padding: 3px;
+    border-radius: 5px;
+    color: #dfa767;
+    font-weight: 600;
+}
+
+.contraste {
+    font-weight: 700;
+    color: #2912be;
+}

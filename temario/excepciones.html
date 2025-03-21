@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="shortcut icon" href="../assets/img/logoExc.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../script.js" defer></script>
     <title>Excepciones</title>
 </head>
 <body>
     <div class="wrapper">
   
+      <header>
+        <nav class="barra-nav">
+
+          <ul>
+            <li class="material-symbols-outlined">
+              menu
+            </li>
+            <li><a href="#Seccion1">Inicio</a></li>
+            <li><a href="#Seccion2">Seccion2</a></li>
+            <li><a href="#Seccion3">Seccion3</a></li>
+            <li><a href="#Seccion4">Seccion4</a></li>
+          </ul>
+
+        </nav>
+      </header>
+
         <aside>
           <header class="encabezado-principal">
             <div class="ep-logo"></div>
@@ -55,6 +73,18 @@
               </a>
             </ul>
           </details>
+        <details>
+          <summary>Base de datos</summary>
+
+          <ul>
+            <a href="../BD/dql.html">
+              <li>Consultas simples</li> 
+              </a>
+            <a href="">
+              <li>Subconsultas, Join y optimización de consultas</li> 
+            </a>
+          </ul>
+        </details>
         </aside>
   
         <main class="contenido-principal">
@@ -120,7 +150,8 @@
     <span class="comentario">//Código que podría lanzar una excepción</span>
   }
   <span class="reservada">catch</span> (<span class="var">Exception e</span>) {
-    <span class="comentario">//Bloque de código que se ejecuta si se lanza una excepción</span>
+    <span class="comentario">//Bloque de código que se ejecuta si se lanza 
+      una excepción</span>
   }  
               </pre>
           </div>
@@ -241,7 +272,8 @@ public class <span class="reservada">Main</span> {
     IllegalArgumentException {
       <span class="reservada">if</span> (numeros.length == <span class="var">0</span>) {
         <span class="reservada">throw new</span> 
-        IllegalArgumentException(<span class="var">"La lista no puede estar vacía"</span>)
+        IllegalArgumentException(<span class="var">"La lista no puede estar 
+          vacía"</span>);
       }
       <span class="reservada">int</span> suma = 0;
       <span class="reservada">for</span> (<span class="reservada">int</span> num: numeros) {
@@ -256,13 +288,14 @@ public class <span class="reservada">Main</span> {
       <span class="reservada">int</span> listaVacia = {};
 
       <span class="reservada">try</span> {
-        <span class="reservada">double</span> resultado = prom.calcularPromedio(<span class="var">listaVacia</span>)
+        <span class="reservada">double</span> resultado = prom.calcularPromedio
+                                    (<span class="var">listaVacia</span>);
         System.out.println(<span class="var">"El promedio es: "</span> + resultado);
       } <span class="reservada">catch</span> (IllegalArgumentException e) {
         System.out.println(<span class="var">"Ocurrió un problema: "</span> + 
-        e.getMessage()); <span class="comentario">/* e.getMessage() muestra un pequeño 
-        mensaje de error relacionado con la excepción 
-        que se ha lanzado */</span>
+        e.getMessage()); <span class="comentario">/* e.getMessage() muestra un 
+          pequeño mensaje de error relacionado con la 
+          excepción que se ha lanzado */</span>
       }
 
     }

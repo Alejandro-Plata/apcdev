@@ -5,7 +5,6 @@
 
 *{
     box-sizing: border-box;
-    position: relative;
     min-width: none;
     margin: 0;
     padding: 0;
@@ -15,6 +14,8 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-size: 18px;
+    position: relative;
 }
 
 h1, h2, h3, h4, summary {
@@ -51,20 +52,57 @@ p {
 .wrapper {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows:  1fr auto;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     grid-template-areas: 
+    "aside header"
     "aside main"
     "aside footer";
 
     background-color: #f6fcfca5;
-
+    position: relative;
 }
+
+.barra-nav {
+    grid-area: header;
+    
+    background-color: #7ac698;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        color: #FFF;
+        text-shadow: 1px 1px 1px silver;
+    }
+
+    li {
+        &:hover {
+            opacity: 0.5;
+            background-color: #7ac698;
+        }
+        &:active {
+            scale: 0.8;
+            transition-duration: 400ms;
+        }
+    }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 30px;
+  color: #FFF;
+  justify-self:flex-start;
+  display: none;
+}
+
 
 /* Header */
 
 .encabezado-principal { 
-    position: relative;
     grid-area: header;
 }
 
@@ -190,8 +228,6 @@ details[open] > summary{
 details[open] {
     background-color: #76e0a652;
 }
-
-
 
 /* Contenido principal */
 
@@ -339,6 +375,7 @@ nav > ul{
         text-align: justify;
         margin-bottom: 10px;
     }
+    
 
     
 }
@@ -380,13 +417,16 @@ pre {
     
     aside {
     display: none;
+    width: 100%;
+
     }
 
     .wrapper {
         grid-template-columns: 1fr;
-        grid-template-rows:  1fr auto;
+        grid-template-rows: auto 1fr auto;
         min-height: 100dvh;
-        grid-template-areas: 
+        grid-template-areas:
+        "header" 
         "main"
         "footer";
     
@@ -394,18 +434,49 @@ pre {
     
     }
 
+    .material-symbols-outlined {
+        display: block;
+    }
+    
+    .header-barra-nav {
+        display: block;
+    }
    
 
 }
 
+
 /* Modificaciones en el texto */
 
 .negrita {
-    box-shadow: 1px 1px 5px #2c2c2c71;
-    padding: 3px;
+    box-shadow: 1px 1px 3px #2c2c2c71;
     border-radius: 5px;
     color: #564a9b;
     font-weight: 600;
 }
 
 
+/* Tablas */
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    border: none;
+    font-family: 'Nunito';
+}
+
+td {
+    padding: 20px;
+}
+
+tr:nth-child(2n){
+    background-color: #5672c822;
+}
+tr:nth-child(2n-1) {
+    background-color: #4260b849;
+}
+th {
+    padding: 20px;
+    background-color: #34e;
+    color: #fff;
+}
