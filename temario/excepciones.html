@@ -128,8 +128,10 @@
             </footer>
           </section> 
 
+          <p>Existe un tipo de bloque try - catch especial orientado al cierre de archivos o peticiones asíncronas, como por ejemplo la petición de datos a una base de datos o la lectura de un fichero. Ambos procesos inician y no terminan hasta que se cierra su flujo. Para cerrarlos correctamente, independientemente de si hay un error durante el proceso y la ejecución del programa se detiene, se utiliza una estructura denominada <a href=""><span class="negrita">try-with</span></a> que explicaré en la sección de <span class="negrita">lectura y escritura de ficheros</span>.</p>
+
       <h2>Tipos de excepciones</h2>
-        <p>Algo que puede resultarnos contraintuitivo al principio que todas las excepciones que han sucedido en nuestro programa durante el tiempo que llevamos programando <span class="negrita">no han necesitado ser tratadas.</span> Esto es debido a que no todas las excepciones son iguales y su variedad nos permite acotar cuál es el problema que tiene nuestro código, facilitando su solución. Justo lo contrario a lo que hace MariaDB :).</p>
+        <p>Algo que puede resultarnos contraintuitivo al principio que todas las excepciones que han sucedido en nuestro programa durante el tiempo que llevamos programando <span class="negrita">no han necesitado ser tratadas.</span> Esto es debido a que no todas las excepciones son iguales y su variedad nos permite acotar cuál es el problema que tiene nuestro código, facilitando su solución. Justo lo contrario a lo que hace MariaDB 🤪.</p>
         <p>El tipo de excepciones al que estamos más acostumbrados son las <span class="var">excepciones en tiempo de ejecución</span> mejor conocidas como <span class="negrita">RunTimeExceptions.</span> Este tipo de excepciones se <span class="reservada">lanzan</span> sin que nosotros tengamos que hacer nada, ya que se deben a <span class="negrita">errores de programación</span> que pueden ser evitados simplemente programando correctamente.</p>
         <p>Veamos un ejemplo: </p>
 
@@ -184,6 +186,97 @@ public class <span class="reservada">Main</span> {
           </footer>
         </section>  
 
+        <p>Todas las excepciones heredan de la clase <span class="reservada">Throwable</span>. Más concretamente, de la clase exception heredan 2 subclases principales, que son <span class="negrita">Error y Exception.</span></p>
+        
+          <p>La clase <span class="reservada">Error</span> no es una excepción, pero al igual que las excepciones se puede lanzar (de ahí que herede de <span class="var">Throwable</span>). Cuando ocurre un error, la máquina virtual de Java se detiene, porque es una situación tan especial que no podemos hacer nada al respecto. Un ejemplo de errores de esta clase podría ser que el ordenador <span class="var">se quedase sin memoria</span>. Si el ordenador se queda sin memoria y no puedes seguir ejecutando código, no tiene sentido tratar el error, ni siquiera podrías declarar una variable para tratar el error.</li></p>
+          <p>La clase <span class="reservada">Exception</span> por su parte está destinada a errores que sí pueden ser tratados, ya que no son errores catastróficos. Una de las subclases más importantes de Exception es <span class="negrita">RunTimeException.</span></p>
+       
+
+        <section class="card-cod">
+
+          <header class="card-def-header">
+              <div class="card-titulo">
+              <h2>RunTimeException</h2>
+              </div>
+              <div>
+                  <img class="card-def-icon" src="../assets/img/logo.png" alt="Imagen card">
+              </div>
+          </header>
+          <footer class="card-cod-footer">
+              
+           <p><span class="negrita">RunTimeException es una subclase de Exception</span> que representa excepciones que ocurren <span class="reservada">durante la ejecución del programa</span>, generalmente debido a <span class="negrita">errores de lógica o uso incorrecto del código</span> (como dividir por cero o acceder a un índice fuera de rango).
+
+            Es útil porque permite identificar problemas que <span class="var">podrían evitarse con una mejor programación</span>.
+            
+            Su principal diferencia con otras subclases de Exception (como IOException) es que <span class="negrita"> las RunTimeException son no chequeadas (unchecked)</span>, lo que significa que el compilador no obliga a manejarlas o declararlas, mientras que las excepciones chequeadas sí requieren un manejo explícito (try-catch o throws).</p>  
+
+          </footer>
+        </section> 
+
+        <h2>Que otro se coma el marrón</h2>
+        
+        <p>En Java, cuando escribimos código, a veces surgen situaciones excepcionales que no podemos evitar dentro de un método específico, como un error matemático o un problema con datos que no controlamos directamente. En estos casos, <span class="negrita">podemos decidir no resolver el problema en el lugar exacto donde ocurre</span>, sino pasar la tarea de lidiar con ese problema a quien esté usando nuestro código. Esto se logra indicando que nuestro método <span class="var">puede generar un error</span> y dejando que el código que lo llama decida qué hacer al respecto.
+
+          Pongamos un ejemplo práctico: imagina que estás creando una <span class="negrita">función para calcular el promedio de una lista de números</span>. Si la lista está <span class="reservada">vacía</span>, no hay forma de calcular un promedio válido, y eso es un problema. Podrías intentar solucionarlo dentro de la función, pero quizás no sabes qué hacer en ese caso: ¿deberías devolver un valor por defecto, mostrar un mensaje de error o detener el programa? En lugar de tomar esa decisión tú, puedes <span class="reservada">"pasarle el marrón" a otro</span> avisando que este problema podría ocurrir y dejar que quien use tu función decida cómo manejarlo.</p>
+
+          <section class="card-cod">
+
+            <header class="card-cod-header">
+                <div class="card-titulo">
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Promedio</h2>
+                <h3>Ejemplo del uso de throws en Java</h3>
+                </div>
+                <div>
+                    <img class="card-icon" src="../assets/img/logo.png" alt="Imagen card">
+                </div>
+            </header>
+            <footer class="card-cod-footer">
+                
+                <div class="card-cod-codigo">
+                    <pre>
+  
+  <span class="reservada">public class</span> <span class="var">Promedio</span> {
+
+    <span class="reservada">public double</span> <span class="var">calcularPromedio</span>(<span class="reservada">int</span>[] numeros) <span class="negrita">throws</span> 
+    IllegalArgumentException {
+      <span class="reservada">if</span> (numeros.length == <span class="var">0</span>) {
+        <span class="reservada">throw new</span> 
+        IllegalArgumentException(<span class="var">"La lista no puede estar vacía"</span>)
+      }
+      <span class="reservada">int</span> suma = 0;
+      <span class="reservada">for</span> (<span class="reservada">int</span> num: numeros) {
+        suma += num;
+      }
+      <span class="reservada">return</span> (<span class="reservada">double</span>) suma / numeros.length;
+    }
+
+    <span class="reservada">public static void</span> <span class="var">main</span> (String[] args) {
+
+      Promedio prom = <span class="reservada">new</span> Promedio(); 
+      <span class="reservada">int</span> listaVacia = {};
+
+      <span class="reservada">try</span> {
+        <span class="reservada">double</span> resultado = prom.calcularPromedio(<span class="var">listaVacia</span>)
+        System.out.println(<span class="var">"El promedio es: "</span> + resultado);
+      } <span class="reservada">catch</span> (IllegalArgumentException e) {
+        System.out.println(<span class="var">"Ocurrió un problema: "</span> + 
+        e.getMessage()); <span class="comentario">/* e.getMessage() muestra un pequeño 
+        mensaje de error relacionado con la excepción 
+        que se ha lanzado */</span>
+      }
+
+    }
+
+  }
+                    </pre>
+                </div>
+
+                <p>En este caso, el método calcularPromedio no intenta resolver el problema de una lista vacía. En lugar de eso, <span class="negrita">lanza una excepción <span class="var">(IllegalArgumentException)</span> para señalar que algo salió mal.</span>  Al usar throws en la declaración del método, estás haciendo que quién sea que llame a ese método se va a tener que encargar de <span class="negrita">decidir qué hacer con el error.</span> Entonces, en main, el código que usa calcularPromedio tiene que prepararse para esa posibilidad y decidir cómo responder, en este caso usando <span class="reservada">un try-catch</span>  para capturar el error y mostrar un mensaje.</p>
+            </footer>
+          </section>  
+
+          <h2>Cómo lanzar exepciones con <span class="negrita">throw</span></h2>
+          <p>Esto es algo básico pero fundamental: cuando algo falla en tu programa y quieres señalarlo explícitamente, usas throw seguido de una instancia de una clase de excepción, como throw new NumberFormatException(). Por ejemplo, si intentas convertir una cadena como "abc" a un número entero, puedes lanzar esa excepción para indicar que el formato es inválido.</p>
 
         </main>
   
